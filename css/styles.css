@@ -1,0 +1,42 @@
+
+/* Tema: Interfaz de Sistemas - estilo terminal/panel */
+:root{
+	--bg:#0b0f12;
+	--panel:#0f1720;
+	--muted:#94a3b8;
+	--accent:#76e4f7;
+	--accent-2:#60a5fa;
+	--glass:rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:linear-gradient(180deg,#02040a 0%,var(--bg) 100%);color:var(--muted);font-family:Menlo,Consolas,monospace;margin:0;padding:2rem}
+.container{max-width:980px;margin:0 auto}
+header.site{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.brand{background:var(--panel);padding:.6rem .9rem;border-radius:8px;color:var(--accent);display:flex;flex-direction:column}
+.brand h1{margin:0;font-size:1.6rem;color:var(--accent);letter-spacing:0.6px}
+.brand p{margin:0;font-size:.78rem;color:var(--muted)}
+.site-title{font-family:Segoe UI, Roboto, Arial, sans-serif}
+nav.site-nav{margin-left:auto}
+nav.site-nav a{color:var(--muted);text-decoration:none;border:1px solid transparent;padding:.35rem .6rem;border-radius:6px}
+nav.site-nav a:hover{color:var(--accent);border-color:rgba(118,228,247,0.08);background:var(--glass)}
+main{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+.card{background:var(--panel);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.5)}
+.hero{padding:1.2rem}
+.hero h2{color:var(--accent);margin:0 0 .4rem 0}
+.posts-list{display:flex;flex-direction:column;gap:.6rem}
+.post-item{display:block;padding:.6rem;border-radius:6px;color:var(--muted);text-decoration:none;border:1px solid transparent}
+.post-item:hover{background:rgba(255,255,255,0.02);color:var(--accent-2);border-color:rgba(96,165,250,0.08)}
+.meta{font-size:.78rem;color:#6b7280}
+aside.right{position:relative}
+.about{font-size:.88rem;color:var(--muted);line-height:1.4}
+footer.sitefoot{margin-top:1.2rem;color:#27323a;font-size:.82rem}
+/* Forzar menú vertical */
+nav.site-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width:860px){main{grid-template-columns:1fr}nav.site-nav{margin-left:0;margin-top:.6rem}}
